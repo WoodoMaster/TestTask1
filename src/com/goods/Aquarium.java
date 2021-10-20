@@ -2,5 +2,7 @@ package com.goods;
 
 public class Aquarium extends Product {
     int volumeLiters;
-public Aquarium(){}
+public Aquarium(){
+    System.out.println();
+}
 }
