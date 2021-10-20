@@ -1,9 +1,9 @@
 package com.goods;
 
 public abstract class Product {
-    int id;
-    String name;
-    boolean isAvailable;
-    int quantityInStock;
-    int price;
+   private int id;
+    private  String name;
+    private boolean isAvailable;
+    private int quantityInStock;
+    private int price;
 }
