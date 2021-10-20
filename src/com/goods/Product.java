@@ -6,4 +6,5 @@ public abstract class Product {
     private boolean isAvailable;
     private int quantityInStock;
     private int price;
+
 }
