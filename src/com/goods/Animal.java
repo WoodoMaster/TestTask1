@@ -14,4 +14,16 @@ public abstract class Animal extends Product {
     public int getMinTemperature() {
         return minTemperature;
     }
+
+  public int getNeededFilterPerformance() {
+    return neededFilterPerformance;
+  }
+
+  public int getNeededCompressorPower() {
+    return neededCompressorPower;
+  }
+
+  public int getNeededLightBrightness() {
+    return neededLightBrightness;
+  }
 }
