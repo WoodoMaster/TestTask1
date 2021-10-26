@@ -1,27 +1,49 @@
 package com.javaWeb;
-import com.model.Catalog;
-import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
 
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.File;
-import java.io.IOException;
+import com.model.Fish;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) {
-        File file = new File("Animals.xml");
-        DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
-        Document document = null;
-        try {
-             document  = documentBuilderFactory.newDocumentBuilder().parse(file);
-        } catch (SAXException | IOException | ParserConfigurationException e) {
-            System.out.println(e.getMessage());
-            return;
+        String documentName = "Animals.xml";
+        Document document = Parsing.getDocument(documentName);
+        Node root = document.getFirstChild();
+        NodeList rootChild = root.getChildNodes();
+        Node animalNode = null;
+
+        for (int i = 0; i < rootChild.getLength(); i++) {
+            if ("ANIMAL".equals(rootChild.item(i).getNodeName())) {
+                animalNode = rootChild.item(i);
+            }
+        }
+        Parsing.printNodes(animalNode.getChildNodes());
+        NodeList animalNodeChild = animalNode.getChildNodes();
+        NodeList fishNodeList = null;
+        ArrayList<Node> reptileNodes = new ArrayList<>();
+        ArrayList<Fish> fishArrayList = new ArrayList<>();
+        for (int i = 0; i < animalNodeChild.getLength(); i++) {
+            if ("FISH".equals(animalNodeChild.item(i))) {
+                fishNodeList = animalNodeChild.item(i).getChildNodes();
+                fishArrayList.add(new Fish(fishNodeList.item(0).getTextContent(),
+                        Integer.parseInt(fishNodeList.item(1).getTextContent()),
+                        Integer.parseInt(fishNodeList.item(2).getTextContent()),
+                        Integer.parseInt(fishNodeList.item(3).getTextContent()),
+                        Integer.parseInt(fishNodeList.item(4).getTextContent()),
+                        Integer.parseInt(fishNodeList.item(5).getTextContent()),
+                        Integer.parseInt(fishNodeList.item(6).getTextContent())
+                ));
+            } else if ("REPTILE".equals(animalNodeChild.item(i))) {
+                reptileNodes.add(animalNodeChild.item(i));
+            }
         }
 
-        Catalog catalog  = null;
-        System.out.println(catalog);
+        fishArrayList.forEach(System.out::println);
+
     }
 }
+

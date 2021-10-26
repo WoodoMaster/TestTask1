@@ -10,6 +10,16 @@ public class Animal {
     private int neededLightBrightness;
     private int number;
 
+    public Animal(String name, int neededVolumeInLiters, int minTemperature, int neededFilterPerformance,
+                  int neededCompressorPower, int neededLightBrightness, int number) {
+        this.name = name;
+        this.neededVolumeInLiters = neededVolumeInLiters;
+        this.minTemperature = minTemperature;
+        this.neededFilterPerformance = neededFilterPerformance;
+        this.neededCompressorPower = neededCompressorPower;
+        this.neededLightBrightness = neededLightBrightness;
+        this.number = number;
+    }
 
     public int getNeededVolumeInLiters() {
         return neededVolumeInLiters;
