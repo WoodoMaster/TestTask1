@@ -1,0 +1,57 @@
+<CATALOG>
+
+    <ANIMAL>
+        <FISH>
+            <NAME>Goldfish</NAME>
+            <VOlUME>20</VOlUME>
+            <TEMPERATURE>22</TEMPERATURE>
+            <LIGHT>10</LIGHT>
+            <COMPRESSOR>10</COMPRESSOR>
+            <FILTER>10</FILTER>
+            <NUMBER>5</NUMBER>
+        </FISH>
+
+        <FISH>
+            <NAME>Cateye</NAME>
+            <VOlUME>43</VOlUME>
+            <TEMPERATURE>20</TEMPERATURE>
+            <LIGHT>7</LIGHT>
+            <COMPRESSOR>13</COMPRESSOR>
+            <FILTER>10</FILTER>
+            <NUMBER>2</NUMBER>
+        </FISH>
+
+        <REPTILE>
+            <TURTLE>
+                <NAME>SeaTurtle</NAME>
+                <VOlUME>100</VOlUME>
+                <TEMPERATURE>17</TEMPERATURE>
+                <LIGHT>22</LIGHT>
+                <COMPRESSOR>0</COMPRESSOR>
+                <FILTER>11</FILTER>
+                <NUMBER>1</NUMBER>
+            </TURTLE>
+
+            <TURTLE>
+                <NAME>SwampTurtle</NAME>
+                <VOlUME>44</VOlUME>
+                <TEMPERATURE>23</TEMPERATURE>
+                <LIGHT>6</LIGHT>
+                <COMPRESSOR>10</COMPRESSOR>
+                <FILTER>0</FILTER>
+                <NUMBER>2</NUMBER>
+            </TURTLE>
+            <CANCER>
+                <NAME>RiverCancer</NAME>
+                <VOlUME>15</VOlUME>
+                <TEMPERATURE>13</TEMPERATURE>
+                <LIGHT>9</LIGHT>
+                <COMPRESSOR>20</COMPRESSOR>
+                <FILTER>40</FILTER>
+                <NUMBER>2</NUMBER>
+            </CANCER>
+        </REPTILE>
+
+    </ANIMAL>
+
+</CATALOG>

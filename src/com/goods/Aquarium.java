@@ -1,5 +1,7 @@
 package com.goods;
 
+import com.model.Animal;
+
 import java.util.ArrayList;
 
 public class Aquarium extends Product {
@@ -20,4 +22,10 @@ public class Aquarium extends Product {
    this.compressor = new Compressor(animals.stream().mapToInt(Animal::getNeededCompressorPower).sum());
   }
 
+    @Override
+    public String toString() {
+        return "Aquarium volume " + volumeLiters + " l, compressor " + compressor.getPowerInWatt() +
+                ", filter performance " + filter.getPerformance() +
+                ", light brightness " + light.getBrightness();
+    }
 }

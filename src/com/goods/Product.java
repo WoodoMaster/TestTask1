@@ -3,14 +3,13 @@ package com.goods;
 public abstract class Product {
     private int id;
     private  String name;
-    private boolean isAvailable;
     private static int quantityInStock;
     private int price;
 
 
 
     public boolean isAvailable() {
-        return isAvailable;
+        return quantityInStock>0;
     }
 
     public int getId() {

@@ -1,4 +1,4 @@
-package com.goods;
+package com.model;
 
 public abstract class Reptile extends Animal{
 }
